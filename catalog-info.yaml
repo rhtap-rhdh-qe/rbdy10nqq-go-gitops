@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rbdy10nqq-go-gitops
+  description: This is GitOps manifest for rbdy10nqq-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: rbdy10nqq-go
+    janus-idp.io/tekton: rbdy10nqq-go 
+    backstage.io/kubernetes-id: rbdy10nqq-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:rbdy10nqq-go
